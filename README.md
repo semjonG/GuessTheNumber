@@ -25,7 +25,7 @@
 • Экран отгадывания числа игроком
 • Экран с результатом игры.
 
-<img width="400" alt="example" src="https://raw.githubusercontent.com/semjonG/CocktailList/main/screenShot1.png"><br>
+<img width="700" alt="example" src="https://raw.githubusercontent.com/semjonG/GuessTheNumber/main/0.png"><br>
 
 Технические требования
 Для реализации интерфейса пользователя необходимо
