@@ -60,3 +60,31 @@
 пользователя(например, ввод некорректных значений)
 
 • Качество и чистота кода
+
+# Выполнено
+- No storyboard (programmatically)
+- UIKit
+- MVC
+
+<table>
+  <tr>
+    <td>Start</td>
+    <td>Entering number</td>
+    <td>Number entered</td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/semjonG/GuessTheNumber/main/1.png"></td>
+    <td><img src="https://raw.githubusercontent.com/semjonG/GuessTheNumber/main/2.png"></td>
+    <td><img src="https://raw.githubusercontent.com/semjonG/GuessTheNumber/main/2.1.png"></td>
+  </tr>
+  <tr>
+    <td>Computer is guessing</td>
+    <td>Human is guessing</td>
+    <td>Results</td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/semjonG/GuessTheNumber/main/3.png"></td>
+    <td><img src="https://raw.githubusercontent.com/semjonG/GuessTheNumber/main/4.png"></td>
+    <td><img src="https://raw.githubusercontent.com/semjonG/GuessTheNumber/main/5.png"></td>
+  </tr>
+ </table>
