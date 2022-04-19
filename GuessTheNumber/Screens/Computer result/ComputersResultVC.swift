@@ -9,15 +9,9 @@ import UIKit
 
 final class ComputersResultVC: UIViewController {
     
-    var numberModel = NumbersModel()
-    
-    var min = 0
-    var max = 100
-    var mid = 0
-    var counter = 1
-    
-    private let roundLabel = MainLabel()
-    private let whoseGuessesLabel = MainLabel()
+    //MARK: - Private properties
+    private let tryLabel = MainLabel()
+    private let playerGuessesLabel = MainLabel()
     private let guessesLabel = MainLabel()
     private let lessButton = CustomButton()
     private let equalButton = CustomButton()
@@ -25,6 +19,14 @@ final class ComputersResultVC: UIViewController {
     
     private lazy var buttonsStackView = UIStackView(arrangedSubviews: [lessButton, equalButton, moreButton], axis: .horizontal, spacing: 10)
     
+    var numberModel = NumbersModel()
+    
+    var min = 0
+    var max = 100
+    var mid = 0
+    var counter = 1
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,26 +37,43 @@ final class ComputersResultVC: UIViewController {
     }
     
     private func setupViews() {
+        
         lessButton.setTitle(">", for: .normal)
+        lessButton.backgroundColor = .white
+        lessButton.layer.borderWidth = 1
+        lessButton.layer.borderColor = UIColor.black.cgColor
+        lessButton.setTitleColor(UIColor.black, for: .normal)
+        
         equalButton.setTitle("=", for: .normal)
+        equalButton.backgroundColor = .white
+        equalButton.layer.borderWidth = 1
+        equalButton.layer.borderColor = UIColor.black.cgColor
+        equalButton.setTitleColor(UIColor.black, for: .normal)
+        
         moreButton.setTitle("<", for: .normal)
+        moreButton.backgroundColor = .white
+        moreButton.layer.borderWidth = 1
+        moreButton.layer.borderColor = UIColor.black.cgColor
+        moreButton.setTitleColor(UIColor.black, for: .normal)
         
         lessButton.addTarget(self, action: #selector(lessButtonTapped), for: .touchUpInside)
         equalButton.addTarget(self, action: #selector(equalButtonTapped), for: .touchUpInside)
         moreButton.addTarget(self, action: #selector(moreButtonTapped), for: .touchUpInside)
+        
         counter = 1
-        roundLabel.text = "Try № \(counter)"
-        whoseGuessesLabel.text = "computer guesses"
+        tryLabel.text = "Try № \(counter)"
+        playerGuessesLabel.text = "Computer is guessing"
         mid = (min + max) / 2
-        guessesLabel.text = "number is \(mid)?"
+        guessesLabel.text = "Your number is - \(mid)?"
         buttonsStackView.distribution = .fillEqually
         
-        view.addSubview(roundLabel)
-        view.addSubview(whoseGuessesLabel)
+        view.addSubview(tryLabel)
+        view.addSubview(playerGuessesLabel)
         view.addSubview(guessesLabel)
         view.addSubview(buttonsStackView)
     }
     
+    //MARK: - Actions
     @objc func lessButtonTapped() {
         moreFindNumber()
     }
@@ -77,8 +96,7 @@ final class ComputersResultVC: UIViewController {
             max = mid
             mid = (min + max) / 2
             counter += 1
-            guessesLabel.text = "number is \(mid)?"
-            roundLabel.text = "Try № \(counter)"
+            tryLabel.text = "Try № \(counter)"
         }
     }
     
@@ -86,30 +104,30 @@ final class ComputersResultVC: UIViewController {
         if numberModel.myNumber > mid {
             min = mid
             mid = (min + max) / 2
-            guessesLabel.text = "number is \(mid)?"
             counter += 1
-            roundLabel.text = "Try № \(counter)"
+            tryLabel.text = "Try № \(counter)"
         }
     }
 }
 
+//MARK: - Extensions
 extension ComputersResultVC {
     private func setConstraints() {
         NSLayoutConstraint.activate([
             
-            roundLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
-            roundLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            tryLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
+            tryLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            whoseGuessesLabel.topAnchor.constraint(equalTo: roundLabel.bottomAnchor, constant: 20),
-            whoseGuessesLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            playerGuessesLabel.topAnchor.constraint(equalTo: tryLabel.bottomAnchor, constant: 20),
+            playerGuessesLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
-            guessesLabel.topAnchor.constraint(equalTo: whoseGuessesLabel.bottomAnchor, constant: 100),
+            guessesLabel.topAnchor.constraint(equalTo: playerGuessesLabel.bottomAnchor, constant: 100),
             guessesLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             
             buttonsStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100),
             buttonsStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
             buttonsStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
-            buttonsStackView.heightAnchor.constraint(equalToConstant: 40)
+            buttonsStackView.heightAnchor.constraint(equalToConstant: 64)
         ])
     }
 }

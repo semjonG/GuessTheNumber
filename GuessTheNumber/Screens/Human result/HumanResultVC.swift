@@ -9,17 +9,19 @@ import UIKit
 
  final class HumanResultVC: UIViewController {
     
-    var numbersModel = NumbersModel()
-    
+    //MARK: - Private properties
     private let gamersResultTextField = NumberTextField()
     private let enterNumberButton = CustomButton()
     private let roundLabel = MainLabel()
     private let whoseGuessesLabel = MainLabel()
     private let resultLabel = MainLabel()
     
+    var numbersModel = NumbersModel()
+     
     var counter = 0
     var compCounter = 0
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,8 +45,10 @@ import UIKit
         view.addSubview(resultLabel)
         enterNumberButton.isEnabled = false
         enterNumberButton.backgroundColor = UIColor(red:0.50, green:0.50, blue:0.97, alpha:1.0)
+        enterNumberButton.layer.cornerRadius = 16
     }
     
+    //MARK: - Actions
     @objc func didChangeText() {
         if let number = gamersResultTextField.text?.count {
             
@@ -80,7 +84,6 @@ import UIKit
         if let text = gamersResultTextField.text {
             guard let number = Int(text.filter { $0.isWholeNumber }) else { return }
             numbersModel.myNumberEnterred = number
-            print(number)
             checkResult(myNumber: numbersModel.myNumberEnterred)
             counter += 1
             roundLabel.text = "Try № \(counter)"
@@ -88,6 +91,7 @@ import UIKit
     }
 }
 
+//MARK: - Extensions
 extension HumanResultVC {
     private func setConstraints() {
         NSLayoutConstraint.activate([
@@ -101,6 +105,7 @@ extension HumanResultVC {
             gamersResultTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             gamersResultTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
+            enterNumberButton.heightAnchor.constraint(equalToConstant: 48),
             enterNumberButton.topAnchor.constraint(equalTo: gamersResultTextField.bottomAnchor, constant: 30),
             enterNumberButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             enterNumberButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),

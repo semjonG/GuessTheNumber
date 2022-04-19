@@ -35,21 +35,20 @@ import UIKit
         let guessVC = GuessTheNumberVC()
         self.present(guessVC, animated: true, completion: nil)
     }
-    
-    
 }
 
 extension MainViewController {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            //Constraints to NameLabel
+            
             nameLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
             nameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            //Constraints to StartNewGameButton
+            
             startNewGameButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150),
             startNewGameButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             startNewGameButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            startNewGameButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+            startNewGameButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            startNewGameButton.heightAnchor.constraint(equalToConstant: 48)
         ])
     }
 }

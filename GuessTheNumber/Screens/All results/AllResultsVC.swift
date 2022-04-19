@@ -9,6 +9,7 @@ import UIKit
 
 final class AllResultsVC: UIViewController {
     
+    //MARK: - Private properties
     private let scoresLabel = MainLabel()
     private let myTrieslabel = MainLabel()
     private let compTriesLabel = MainLabel()
@@ -18,6 +19,7 @@ final class AllResultsVC: UIViewController {
     var myCounter = 1
     var compCounter = 5
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,23 +41,26 @@ final class AllResultsVC: UIViewController {
         view.addSubview(mainMenuButton)
         mainMenuButton.setTitle("Main menu", for: .normal)
         mainMenuButton.addTarget(self, action: #selector(mainMenuButtonTapped), for: .touchUpInside)
+        mainMenuButton.layer.cornerRadius = 16
     }
     
     func calculateWhoWin() {
         if myCounter > compCounter {
-            whoWinLabel.text = "Computer win"
+            whoWinLabel.text = "Computer wins"
         } else if myCounter < compCounter {
             whoWinLabel.text = "You win"
         } else {
-            whoWinLabel.text = "It's draw"
+            whoWinLabel.text = "Draw!"
         }
     }
- 
+    
+    //MARK: - Actions
     @objc func mainMenuButtonTapped() {
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }
 
+//MARK: - Extensions
 extension AllResultsVC {
     func setConstraints() {
         NSLayoutConstraint.activate([
@@ -68,6 +73,7 @@ extension AllResultsVC {
             compTriesLabel.topAnchor.constraint(equalTo: myTrieslabel.bottomAnchor, constant: 15),
             compTriesLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             
+            mainMenuButton.heightAnchor.constraint(equalToConstant: 48),
             mainMenuButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60),
             mainMenuButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             mainMenuButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),

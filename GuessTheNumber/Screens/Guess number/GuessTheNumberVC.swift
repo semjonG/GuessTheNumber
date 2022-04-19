@@ -9,10 +9,12 @@ import UIKit
 
 final class GuessTheNumberVC: UIViewController {
     
-    private let roundLabel = MainLabel()
+    //MARK: - Private properties
+    private let tryLabel = MainLabel()
     private let numberTextField = NumberTextField()
     private let enterNumberButton = CustomButton()
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,16 +26,18 @@ final class GuessTheNumberVC: UIViewController {
     }
     
     private func setupViews() {
-        roundLabel.text = "Try № "
+        tryLabel.text = "Try № "
         enterNumberButton.addTarget(self, action: #selector(enterButtonTapped), for: .touchUpInside)
         numberTextField.addTarget(self, action: #selector(didChangeText), for: .editingChanged)
-        view.addSubview(roundLabel)
+        view.addSubview(tryLabel)
         view.addSubview(numberTextField)
         view.addSubview(enterNumberButton)
         enterNumberButton.isEnabled = false
         enterNumberButton.backgroundColor = UIColor(red:0.50, green:0.50, blue:0.97, alpha:1.0)
+        enterNumberButton.layer.cornerRadius = 16
     }
     
+    //MARK: - Actions
     @objc func didChangeText() {
         if let number = numberTextField.text?.count {
             if number > 0 {
@@ -49,7 +53,6 @@ final class GuessTheNumberVC: UIViewController {
     @objc func enterButtonTapped() {
         if let text = numberTextField.text {
             guard let number = Int(text.filter { $0.isWholeNumber }) else { return }
-            print(number)
             let computersResultVC = ComputersResultVC()
             computersResultVC.numberModel.myNumber = number
             self.present(computersResultVC, animated: true, completion: nil)
@@ -57,23 +60,23 @@ final class GuessTheNumberVC: UIViewController {
         }
     }
 }
-
+//MARK: - Extensions
 extension GuessTheNumberVC {
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            //Constraints to RoundLabel
-            roundLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
-            roundLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            //Constraints to NumberTextField
-            numberTextField.topAnchor.constraint(equalTo: roundLabel.bottomAnchor, constant: 50),
+
+            tryLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
+            tryLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+
+            numberTextField.topAnchor.constraint(equalTo: tryLabel.bottomAnchor, constant: 50),
             numberTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             numberTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
-            //Constraints to EnterNumberButton
             enterNumberButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -150),
             enterNumberButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             enterNumberButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            enterNumberButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+            enterNumberButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            enterNumberButton.heightAnchor.constraint(equalToConstant: 48)
         ])
     }
 }

@@ -23,9 +23,9 @@ class StartNewGameButton: UIButton {
         setTitle("Start New Game", for: .normal)
         backgroundColor = .systemBlue
         setTitleColor(.white, for: .normal)
-        titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         titleLabel?.numberOfLines = 1
-        layer.cornerRadius = 10
+        layer.cornerRadius = 16
         translatesAutoresizingMaskIntoConstraints = false
     }
 }
