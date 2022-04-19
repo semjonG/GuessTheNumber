@@ -9,21 +9,39 @@
 /* Begin PBXBuildFile section */
 		04BC0222280DE99200F116E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC0221280DE99200F116E7 /* AppDelegate.swift */; };
 		04BC0224280DE99200F116E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC0223280DE99200F116E7 /* SceneDelegate.swift */; };
-		04BC0226280DE99200F116E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC0225280DE99200F116E7 /* ViewController.swift */; };
-		04BC0229280DE99200F116E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BC0227280DE99200F116E7 /* Main.storyboard */; };
+		04BC0226280DE99200F116E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC0225280DE99200F116E7 /* MainViewController.swift */; };
 		04BC022B280DE99500F116E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04BC022A280DE99500F116E7 /* Assets.xcassets */; };
 		04BC022E280DE99500F116E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BC022C280DE99500F116E7 /* LaunchScreen.storyboard */; };
+		04BC0237280EB82200F116E7 /* MainLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC0236280EB82200F116E7 /* MainLabel.swift */; };
+		04BC0239280EB84F00F116E7 /* StartNewGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC0238280EB84F00F116E7 /* StartNewGameButton.swift */; };
+		04BC023B280EB91100F116E7 /* GuessTheNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC023A280EB91000F116E7 /* GuessTheNumberVC.swift */; };
+		04BC023D280EB93E00F116E7 /* ComputersResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC023C280EB93E00F116E7 /* ComputersResultVC.swift */; };
+		04BC023F280EB97400F116E7 /* HumanResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC023E280EB97400F116E7 /* HumanResultVC.swift */; };
+		04BC0248280EBEAE00F116E7 /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC0247280EBEAE00F116E7 /* NumberTextField.swift */; };
+		04BC024A280EBEF900F116E7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC0249280EBEF900F116E7 /* CustomButton.swift */; };
+		04BC024D280EBF7100F116E7 /* NumbersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC024C280EBF7100F116E7 /* NumbersModel.swift */; };
+		04BC0251280EBFE300F116E7 /* UIStackView+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC0250280EBFE300F116E7 /* UIStackView+Init.swift */; };
+		04BC0255280ECC3B00F116E7 /* AllResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC0254280ECC3B00F116E7 /* AllResultsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04BC021E280DE99200F116E7 /* GuessTheNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BC0221280DE99200F116E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04BC0223280DE99200F116E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04BC0225280DE99200F116E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04BC0228280DE99200F116E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04BC0225280DE99200F116E7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		04BC022A280DE99500F116E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04BC022D280DE99500F116E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04BC022F280DE99500F116E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04BC0236280EB82200F116E7 /* MainLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLabel.swift; sourceTree = "<group>"; };
+		04BC0238280EB84F00F116E7 /* StartNewGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartNewGameButton.swift; sourceTree = "<group>"; };
+		04BC023A280EB91000F116E7 /* GuessTheNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheNumberVC.swift; sourceTree = "<group>"; };
+		04BC023C280EB93E00F116E7 /* ComputersResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputersResultVC.swift; sourceTree = "<group>"; };
+		04BC023E280EB97400F116E7 /* HumanResultVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanResultVC.swift; sourceTree = "<group>"; };
+		04BC0247280EBEAE00F116E7 /* NumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTextField.swift; sourceTree = "<group>"; };
+		04BC0249280EBEF900F116E7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		04BC024C280EBF7100F116E7 /* NumbersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersModel.swift; sourceTree = "<group>"; };
+		04BC0250280EBFE300F116E7 /* UIStackView+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Init.swift"; sourceTree = "<group>"; };
+		04BC0254280ECC3B00F116E7 /* AllResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllResultsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,120 @@
 		04BC0220280DE99200F116E7 /* GuessTheNumber */ = {
 			isa = PBXGroup;
 			children = (
+				04BC0235280EB75D00F116E7 /* App */,
+				04BC0240280EB99B00F116E7 /* Screens */,
+				04BC024B280EBF1B00F116E7 /* Views */,
+				04BC024E280EBF9A00F116E7 /* Models */,
+				04BC024F280EBFC900F116E7 /* Extensions */,
+				04BC0252280EC00A00F116E7 /* Resources */,
+			);
+			path = GuessTheNumber;
+			sourceTree = "<group>";
+		};
+		04BC0235280EB75D00F116E7 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				04BC0221280DE99200F116E7 /* AppDelegate.swift */,
 				04BC0223280DE99200F116E7 /* SceneDelegate.swift */,
-				04BC0225280DE99200F116E7 /* ViewController.swift */,
-				04BC0227280DE99200F116E7 /* Main.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		04BC0240280EB99B00F116E7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				04BC0241280EB9DD00F116E7 /* Main */,
+				04BC0243280EBCFD00F116E7 /* Guess number */,
+				04BC0245280EBDAF00F116E7 /* Computer result */,
+				04BC0246280EBDD000F116E7 /* Human result */,
+				04BC0253280ECC0500F116E7 /* All results */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		04BC0241280EB9DD00F116E7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				04BC0225280DE99200F116E7 /* MainViewController.swift */,
+				04BC0242280EB9FC00F116E7 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		04BC0242280EB9FC00F116E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04BC0236280EB82200F116E7 /* MainLabel.swift */,
+				04BC0238280EB84F00F116E7 /* StartNewGameButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04BC0243280EBCFD00F116E7 /* Guess number */ = {
+			isa = PBXGroup;
+			children = (
+				04BC023A280EB91000F116E7 /* GuessTheNumberVC.swift */,
+			);
+			path = "Guess number";
+			sourceTree = "<group>";
+		};
+		04BC0245280EBDAF00F116E7 /* Computer result */ = {
+			isa = PBXGroup;
+			children = (
+				04BC023C280EB93E00F116E7 /* ComputersResultVC.swift */,
+			);
+			path = "Computer result";
+			sourceTree = "<group>";
+		};
+		04BC0246280EBDD000F116E7 /* Human result */ = {
+			isa = PBXGroup;
+			children = (
+				04BC023E280EB97400F116E7 /* HumanResultVC.swift */,
+			);
+			path = "Human result";
+			sourceTree = "<group>";
+		};
+		04BC024B280EBF1B00F116E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04BC0247280EBEAE00F116E7 /* NumberTextField.swift */,
+				04BC0249280EBEF900F116E7 /* CustomButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04BC024E280EBF9A00F116E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04BC024C280EBF7100F116E7 /* NumbersModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04BC024F280EBFC900F116E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04BC0250280EBFE300F116E7 /* UIStackView+Init.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		04BC0252280EC00A00F116E7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				04BC022A280DE99500F116E7 /* Assets.xcassets */,
 				04BC022C280DE99500F116E7 /* LaunchScreen.storyboard */,
 				04BC022F280DE99500F116E7 /* Info.plist */,
 			);
-			path = GuessTheNumber;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04BC0253280ECC0500F116E7 /* All results */ = {
+			isa = PBXGroup;
+			children = (
+				04BC0254280ECC3B00F116E7 /* AllResultsVC.swift */,
+			);
+			path = "All results";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +250,6 @@
 			files = (
 				04BC022E280DE99500F116E7 /* LaunchScreen.storyboard in Resources */,
 				04BC022B280DE99500F116E7 /* Assets.xcassets in Resources */,
-				04BC0229280DE99200F116E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +260,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04BC0226280DE99200F116E7 /* ViewController.swift in Sources */,
+				04BC0226280DE99200F116E7 /* MainViewController.swift in Sources */,
 				04BC0222280DE99200F116E7 /* AppDelegate.swift in Sources */,
+				04BC023D280EB93E00F116E7 /* ComputersResultVC.swift in Sources */,
+				04BC0251280EBFE300F116E7 /* UIStackView+Init.swift in Sources */,
+				04BC0239280EB84F00F116E7 /* StartNewGameButton.swift in Sources */,
+				04BC024A280EBEF900F116E7 /* CustomButton.swift in Sources */,
+				04BC023B280EB91100F116E7 /* GuessTheNumberVC.swift in Sources */,
+				04BC0248280EBEAE00F116E7 /* NumberTextField.swift in Sources */,
+				04BC024D280EBF7100F116E7 /* NumbersModel.swift in Sources */,
 				04BC0224280DE99200F116E7 /* SceneDelegate.swift in Sources */,
+				04BC0255280ECC3B00F116E7 /* AllResultsVC.swift in Sources */,
+				04BC0237280EB82200F116E7 /* MainLabel.swift in Sources */,
+				04BC023F280EB97400F116E7 /* HumanResultVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04BC0227280DE99200F116E7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04BC0228280DE99200F116E7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04BC022C280DE99500F116E7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,10 +415,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8RR9M64TNW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GuessTheNumber/Info.plist;
+				INFOPLIST_FILE = GuessTheNumber/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,10 +442,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8RR9M64TNW;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GuessTheNumber/Info.plist;
+				INFOPLIST_FILE = GuessTheNumber/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
